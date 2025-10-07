@@ -3,145 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Stéphane Winckel — Responsable Commercial Dirickx Luxembourg. Solutions de clôtures, portails et sécurité périmétrique pour le Luxembourg." />
-  <title>Dirickx Luxembourg – Stéphane Winckel</title>
+  <title>Stéphane Winckel – Responsable Commercial Dirickx Luxembourg</title>
+  <meta name="description" content="Stéphane Winckel, Responsable Commercial Dirickx au Luxembourg. Contactez-moi pour vos projets de clôtures, portails et solutions de sécurité." />
+  <link rel="icon" href="/logo-dirickx.png" />
 
-  <!-- Tailwind CDN pour un rendu rapide (idéal pour prototype / landing) -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Dirickx Luxembourg – Stéphane Winckel" />
-  <meta property="og:description" content="Responsable Commercial Dirickx pour tout le Luxembourg. Contactez Stéphane pour vos projets de clôtures, portails et sécurité périmétrique." />
+  <!-- Open Graph / Référencement -->
+  <meta property="og:title" content="Stéphane Winckel – Dirickx Luxembourg" />
+  <meta property="og:description" content="Responsable Commercial Dirickx au Luxembourg. Clôtures, portails, sécurité et solutions professionnelles." />
   <meta property="og:image" content="/hero-project.jpg" />
   <meta property="og:url" content="https://www.dirickx.fr/" />
   <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-900 antialiased">
-  <header class="bg-white shadow">
-    <div class="max-w-5xl mx-auto px-6 py-6 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <!-- Ajoute le fichier logo-dirickx.png ou logo-dirickx.svg dans le dépôt -->
-        <img src="/logo-dirickx.png" alt="Dirickx" class="h-12 w-auto" />
-        <div>
-          <h1 class="text-lg font-semibold">Stéphane Winckel</h1>
-          <p class="text-sm text-gray-600">Responsable Commercial · Dirickx — Luxembourg</p>
-        </div>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-4 bg-white shadow">
+    <div class="flex items-center space-x-3">
+      <img src="/logo-dirickx.png" alt="Dirickx" class="h-12 w-auto" />
+      <div>
+        <h1 class="text-xl font-bold">Stéphane Winckel</h1>
+        <p class="text-sm text-gray-600">Responsable Commercial Dirickx Luxembourg</p>
       </div>
-      <a href="mailto:stephane.winckel@luxmeca.lu" class="inline-block px-4 py-2 border rounded-md text-sm font-medium hover:bg-gray-100">Contacter</a>
+    </div>
+    <div class="text-right">
+      <p class="text-sm"><strong>📞</strong> +352 661 686 855</p>
+      <p class="text-sm"><strong>✉️</strong> stephane.winckel@luxmeca.lu</p>
+      <p class="text-xs text-gray-500">Lun–Ven • 8h–15h</p>
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 py-12">
-    <section class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl font-bold mb-3">Votre interlocuteur Dirickx au Luxembourg</h2>
-        <p class="text-gray-700 mb-4">Je représente Dirickx sur tout le territoire luxembourgeois. J'accompagne collectivités, entreprises et particuliers dans leurs projets de clôture, contrôle d'accès et protection périmétrique.</p>
-        <ul class="space-y-2 text-gray-700">
-          <li>🔹 Diagnostics & conseils sur-mesure</li>
-          <li>🔹 Solutions complètes : clôtures, portails, motorisations, systèmes anti-intrusion</li>
-          <li>🔹 Suivi de projet et réseau d'installateurs certifiés</li>
-        </ul>
-        <div class="mt-6 flex gap-3">
-          <a href="#contact" class="px-5 py-3 bg-blue-600 text-white rounded-md shadow-sm">Me contacter</a>
-          <a href="#produits" class="px-5 py-3 border rounded-md">Découvrir Dirickx</a>
+  <!-- Hero Section -->
+  <section class="relative">
+    <img src="/hero-project.jpg" alt="Projet Dirickx" class="w-full h-72 object-cover" />
+    <div class="absolute inset-0 bg-black/50 flex flex-col justify-center items-center text-center text-white px-4">
+      <h2 class="text-3xl font-bold mb-4">Solutions de clôtures et portails au Luxembourg</h2>
+      <p class="max-w-2xl mb-6">J’accompagne collectivités, entreprises et particuliers dans leurs projets de clôture, contrôle d’accès et protection périmétrique avec les solutions Dirickx.</p>
+      <a href="https://www.dirickx.fr/" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-yellow-500 text-white rounded-full font-semibold shadow hover:bg-yellow-600 transition">
+        Découvrir Dirickx
+      </a>
+    </div>
+  </section>
+
+  <!-- Présentation -->
+  <section id="presentation" class="max-w-5xl mx-auto px-6 py-16">
+    <h3 class="text-2xl font-semibold mb-4 text-gray-800">À propos de Dirickx</h3>
+    <p class="text-gray-700 leading-relaxed">
+      Dirickx est le leader européen des solutions de clôtures, portails et protections périmétriques. 
+      Présente depuis plus de 100 ans, la société accompagne les professionnels et les collectivités 
+      dans la sécurisation et l’aménagement de leurs espaces extérieurs.
+    </p>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center mb-10 text-gray-800">Nos solutions au Luxembourg</h3>
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center p-4 border rounded-2xl shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg mb-2">Clôtures & Treillis</h4>
+          <p class="text-gray-600 text-sm">Des clôtures robustes, esthétiques et adaptées à vos besoins résidentiels ou industriels.</p>
+        </div>
+        <div class="text-center p-4 border rounded-2xl shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg mb-2">Portails & Motorisation</h4>
+          <p class="text-gray-600 text-sm">Portails manuels ou automatiques, conçus pour la sécurité et le confort d’utilisation.</p>
+        </div>
+        <div class="text-center p-4 border rounded-2xl shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg mb-2">Contrôle d’accès & Sécurité</h4>
+          <p class="text-gray-600 text-sm">Solutions de sécurité périmétrique et contrôle d’accès pour les entreprises et collectivités.</p>
+        </div>
+        <div class="text-center p-4 border rounded-2xl shadow-sm hover:shadow-md transition">
+          <h4 class="font-semibold text-lg mb-2">Maintenance & Service</h4>
+          <p class="text-gray-600 text-sm">Un accompagnement complet, de la pose à la maintenance, pour des installations durables.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="rounded-lg overflow-hidden shadow-md">
-        <!-- Ajoute hero-project.jpg dans le dépôt -->
-        <img src="/hero-project.jpg" alt="Projet Dirickx" class="w-full h-72 object-cover" />
-      </div>
-    </section>
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-100 py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-2xl font-semibold text-center mb-6 text-gray-800">Contactez-moi</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST" class="bg-white p-8 rounded-2xl shadow-md space-y-4">
+        <input type="text" name="name" placeholder="Nom" required class="w-full border rounded-lg p-3" />
+        <input type="email" name="_replyto" placeholder="Email" required class="w-full border rounded-lg p-3" />
+        <textarea name="message" placeholder="Votre message" required class="w-full border rounded-lg p-3 h-32"></textarea>
+        <button type="submit" class="w-full bg-yellow-500 text-white font-semibold py-3 rounded-lg hover:bg-yellow-600 transition">
+          Envoyer le message
+        </button>
+      </form>
+    </div>
+  </section>
 
-    <section id="produits" class="mt-12 bg-white rounded-lg p-6 shadow-sm">
-      <h3 class="text-2xl font-semibold mb-4">Solutions Dirickx</h3>
-      <div class="grid sm:grid-cols-2 gap-6">
-        <article class="p-4 border rounded">
-          <h4 class="font-medium">Clôtures & Treillis</h4>
-          <p class="text-sm text-gray-600 mt-2">Robustes, adaptées aux collectivités et sites industriels.</p>
-        </article>
-        <article class="p-4 border rounded">
-          <h4 class="font-medium">Portails & Motorisation</h4>
-          <p class="text-sm text-gray-600 mt-2">Solutions sur-mesure pour accès piéton et véhicules.</p>
-        </article>
-        <article class="p-4 border rounded">
-          <h4 class="font-medium">Contrôle d’accès & Sécurité</h4>
-          <p class="text-sm text-gray-600 mt-2">Systèmes intégrés pour la protection périmétrique.</p>
-        </article>
-        <article class="p-4 border rounded">
-          <h4 class="font-medium">Maintenance & Service</h4>
-          <p class="text-sm text-gray-600 mt-2">Réseau d'installateurs et service après-vente dédiés.</p>
-        </article>
-      </div>
-    </section>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 text-sm">
+    <p>&copy; 2025 Stéphane Winckel – Dirickx Luxembourg. Tous droits réservés.</p>
+    <p>
+      <a href="https://www.linkedin.com/in/stephane-winckel" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-400">
+        LinkedIn
+      </a>
+      • <a href="https://www.dirickx.fr/" target="_blank" rel="noopener noreferrer" class="underline hover:text-yellow-400">
+        Site officiel Dirickx
+      </a>
+    </p>
+  </footer>
 
-    <section id="zone" class="mt-12 grid md:grid-cols-2 gap-6 items-center">
-      <div>
-        <h3 class="text-2xl font-semibold">Zone couverte</h3>
-        <p class="text-gray-700 mb-3">Intervention sur l'ensemble du Luxembourg. Pour toute demande, contactez directement Stéphane.</p>
-        <ul class="text-sm text-gray-600">
-          <li>📍 Luxembourg (toute la région)</li>
-        </ul>
-      </div>
-      <div class="h-64 rounded overflow-hidden shadow">
-        <!-- Carte centrée sur le Luxembourg -->
-        <iframe title="Zone Luxembourg" class="w-full h-64" src="https://www.google.com/maps?q=Luxembourg&output=embed" frameborder="0" aria-hidden="false" tabindex="0"></iframe>
-      </div>
-    </section>
-
-    <section id="contact" class="mt-12 bg-white rounded-lg p-6 shadow-sm">
-      <h3 class="text-2xl font-semibold mb-4">Contact</h3>
-
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <p class="text-gray-700">Stéphane Winckel<br/>Responsable Commercial - Dirickx Luxembourg</p>
-          <p class="mt-3 text-sm">Téléphone : <a href="tel:+352661686855" class="text-blue-600">+352 661 686 855</a></p>
-          <p class="mt-1 text-sm">Email : <a href="mailto:stephane.winckel@luxmeca.lu" class="text-blue-600">stephane.winckel@luxmeca.lu</a></p>
-          <div class="mt-4 text-sm text-gray-600">Horaires : Lun–Ven 8:00–15:00</div>
-          <p class="mt-3 text-sm">LinkedIn : <a href="https://www.linkedin.com/search/results/all/?keywords=Stephane%20Winckel" target="_blank" rel="noopener" class="text-blue-600">Stephane Winckel</a></p>
-          <p class="mt-2 text-sm">Site Dirickx : <a href="https://www.dirickx.fr/" target="_blank" rel="noopener" class="text-blue-600">dirickx.fr</a></p>
-        </div>
-
-        <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
-          <div>
-            <label class="block text-sm font-medium">Nom</label>
-            <input name="name" required class="mt-1 block w-full rounded border px-3 py-2" />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Email</label>
-            <input name="email" type="email" required class="mt-1 block w-full rounded border px-3 py-2" />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Téléphone</label>
-            <input name="phone" class="mt-1 block w-full rounded border px-3 py-2" />
-          </div>
-          <div>
-            <label class="block text-sm font-medium">Message</label>
-            <textarea name="message" rows="4" required class="mt-1 block w-full rounded border px-3 py-2"></textarea>
-          </div>
-          <button type="submit" class="px-5 py-3 bg-blue-600 text-white rounded-md">Envoyer</button>
-        </form>
-      </div>
-    </section>
-
-    <footer class="mt-12 text-center text-sm text-gray-500">
-      © <script>document.write(new Date().getFullYear())</script> Dirickx — Responsable Commercial Luxembourg · Stéphane Winckel · Mentions légales
-    </footer>
-  </main>
-
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Dirickx - Stéphane Winckel",
-      "url": "https://www.dirickx.fr/",
-      "telephone": "+352661686855",
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "LU"
-      },
-      "sameAs": ["https://www.linkedin.com/search/results/all/?keywords=Stephane%20Winckel"]
-    }
-  </script>
 </body>
 </html>
