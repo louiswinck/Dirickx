@@ -15,112 +15,73 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS v3 CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" type="image/png" href="./favicon.png">
 
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-      background-color: #f9fafb;
-      color: #111827;
-    }
-    a { transition: all 0.3s ease-in-out; }
-    .fade-in { opacity: 0; transform: translateY(20px); animation: fadeIn 0.8s ease-out forwards; }
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; background-color: #f9fafb; color: #111827; }
+    .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
-    @keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-    .header-anim { opacity: 0; transform: translateY(-20px); animation: headerDrop 0.8s ease-out forwards; animation-delay: 0.3s; }
-    @keyframes headerDrop { to { opacity: 1; transform: translateY(0); } }
-    .logo-anim { opacity: 0; transform: translateY(-15px); animation: logoEntry 1s ease-out forwards; animation-delay: 0.6s; transition: transform 0.4s ease; }
-    .logo-anim:hover { transform: scale(1.08) rotate(-2deg); }
-    @keyframes logoEntry { to { opacity: 1; transform: translateY(0); } }
-    .btn { transition: all 0.3s ease-in-out; }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); }
-    :root { --logo-green: #1f5e2c; }
-    .btn-green { background-color: var(--logo-green); color: #fff; }
-    .btn-green:hover { background-color: #16401a; }
-    .btn-outline-green { border: 2px solid var(--logo-green); color: var(--logo-green); }
-    .btn-outline-green:hover { background-color: var(--logo-green); color: #fff; }
-    header { background-color: #ffffff; }
-    section { background-color: #ffffff; border-radius: 1rem; padding: 3rem 2rem; }
-    footer { background-color: #f3f4f6; padding: 2rem; }
-    .catalogue-container { position: relative; overflow: hidden; border-radius: 1rem; margin-top: 1rem; }
-    .catalogue-container img { transition: transform 0.7s ease; }
-    .catalogue-container:hover img { transform: scale(1.05); }
-    .catalogue-overlay {
-      position: absolute; bottom: 0; right: 0; width: 100%;
-      background: linear-gradient(transparent, rgba(0, 0, 0, 0.5));
-      color: white; padding: 1.5rem 2rem; font-weight: 500; font-size: 1.1rem;
-      border-bottom-left-radius: 0.75rem; border-bottom-right-radius: 0.75rem;
-      display: flex; justify-content: flex-end; align-items: center; gap: 0.5rem;
-    }
-    .section-title { margin-bottom: 1.5rem; }
-    .contact-info p { margin-bottom: 0.75rem; }
-
-    /* Responsive improvements */
-    @media (max-width: 768px) {
-      section { padding: 2rem 1rem; }
-      .catalogue-container img { height: 60vw; object-fit: cover; }
-    }
+    .logo-anim { transition: transform 0.4s ease, opacity 1s ease-out; opacity: 0; }
+    .logo-anim.visible { opacity: 1; transform: translateY(0); }
   </style>
 </head>
-<body>
+<body class="antialiased">
 
-  <header class="sticky top-0 z-50 w-full shadow-sm">
-    <div class="px-4 md:px-6 py-6 flex items-center justify-between header-anim w-full flex-nowrap">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
       <div class="flex items-center gap-4">
         <img src="./logo-dirickx.png" alt="Logo Dirickx" class="h-12 w-auto logo-anim" />
         <div>
-          <p class="text-lg font-semibold" style="color: var(--logo-green);">Stéphane Winckel</p>
+          <p class="text-lg font-semibold text-green-800">Stéphane Winckel</p>
           <p class="text-sm text-gray-500">Chargé d'affaire · Dirickx — Luxembourg</p>
         </div>
       </div>
-      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=stephane.winckel@luxmeca.lu&body=Bonjour%20Stéphane," 
-         target="_blank" 
-         class="btn btn-green px-4 py-2 rounded-md text-sm font-medium">
-         Envoyer un mail
-      </a>
+      <a href="mailto:stephane.winckel@luxmeca.lu" 
+         class="bg-green-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-900 transition">Envoyer un mail</a>
     </div>
   </header>
 
-  <main class="w-full px-4 md:px-6 py-16 space-y-20">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
 
-    <section class="grid md:grid-cols-2 gap-12 items-center fade-in w-full">
+    <!-- Hero Section -->
+    <section class="md:grid md:grid-cols-2 gap-12 items-center fade-in">
       <div>
-        <h1 class="text-4xl font-bold mb-6 section-title" style="color: var(--logo-green);">Votre interlocuteur Dirickx sur la grande région</h1>
+        <h1 class="text-4xl font-bold mb-6 text-green-800">Votre interlocuteur Dirickx sur la grande région</h1>
         <p class="text-gray-700 mb-6 leading-relaxed">Je représente Dirickx sur toute la grande région. J'accompagne collectivités, entreprises et particuliers dans leurs projets de clôture, contrôle d'accès et protection périmétrique.</p>
         <ul class="space-y-3 text-gray-700">
           <li>🔹 Diagnostics & conseils sur-mesure</li>
           <li>🔹 Solutions complètes : clôtures, portails, motorisations, systèmes anti-intrusion</li>
           <li>🔹 Suivi de projet</li>
         </ul>
-        <div class="mt-10 flex flex-wrap gap-5">
-          <a href="#contact" class="btn btn-green px-6 py-3 rounded-md">Me contacter</a>
-          <a href="https://www.dirickx.fr/" target="_blank" rel="noopener" class="btn btn-outline-green px-6 py-3 rounded-md text-sm font-medium">Découvrir Dirickx</a>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#contact" class="bg-green-800 text-white px-6 py-3 rounded-md font-medium hover:bg-green-900 transition">Me contacter</a>
+          <a href="https://www.dirickx.fr/" target="_blank" rel="noopener" class="border-2 border-green-800 text-green-800 px-6 py-3 rounded-md font-medium hover:bg-green-800 hover:text-white transition">Découvrir Dirickx</a>
         </div>
       </div>
 
-      <div class="catalogue-container fade-in w-full">
-        <a href="https://www.dirickx.fr/catalogue/1-DIRICKX-Catalogue-2025.html#/page/0" target="_blank" rel="noopener" class="block relative">
-          <img src="./hero-project.jpg" alt="Projet Dirickx" class="w-full h-80 object-cover" loading="lazy" />
-          <div class="catalogue-overlay">📘 <span>Catalogue Dirickx</span></div>
+      <div class="relative rounded-xl overflow-hidden">
+        <a href="https://www.dirickx.fr/catalogue/1-DIRICKX-Catalogue-2025.html#/page/0" target="_blank">
+          <img src="./hero-project.jpg" alt="Projet Dirickx" class="w-full h-80 md:h-96 object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+          <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/50 to-transparent text-white py-4 px-6 text-right font-medium flex justify-end items-center gap-2">📘 <span>Catalogue Dirickx</span></div>
         </a>
       </div>
     </section>
 
-    <section id="zone" class="grid md:grid-cols-2 gap-12 items-center fade-in w-full">
+    <!-- Localisation -->
+    <section id="zone" class="md:grid md:grid-cols-2 gap-12 items-center fade-in bg-white rounded-xl p-8 shadow-sm">
       <div>
-        <h3 class="text-2xl font-semibold mb-4 section-title" style="color: var(--logo-green);">Localisation</h3>
-        <p class="text-gray-700 mb-5 leading-relaxed">
-          <strong>Lux-Méca SA</strong> basé à <strong>Ehlerange</strong>, <u>au coeur de la grande région</u>.
-        </p>
+        <h2 class="text-2xl font-semibold mb-4 text-green-800">Localisation</h2>
+        <p class="text-gray-700 mb-5">Lux-Méca SA basé à <strong>Ehlerange</strong>, <u>au coeur de la grande région</u>.</p>
         <p class="text-sm text-gray-500">📍 15-17 ZARE Ilôt Est, L-4385 Ehlerange, Luxembourg</p>
       </div>
-
       <div class="rounded-xl overflow-hidden shadow-lg w-full">
         <iframe
           title="Lux-Méca SA – localisation régionale"
-          class="w-full h-64"
+          class="w-full h-64 md:h-80"
           src="https://www.google.com/maps?q=Lux+M%C3%A9ca+s.a.,+15-17+ZARE+Il%C3%B4t+Est,+L-4385+Ehlerange,+Luxembourg&z=10&t=k&output=embed"
           style="border:0;"
           allowfullscreen
@@ -130,39 +91,41 @@
       </div>
     </section>
 
-    <section id="contact" class="p-8 shadow-sm fade-in w-full px-6">
-      <h3 class="text-2xl font-semibold mb-8 text-center section-title" style="color: var(--logo-green);">Contact</h3>
-      <div class="grid md:grid-cols-2 gap-12 w-full">
-        <div class="contact-info">
-          <p class="text-gray-700 text-lg font-medium">Stéphane Winckel</p>
-          <p class="text-gray-500 mb-5">Chargé d'affaire - Dirickx Luxembourg / Luxmeca SA</p>
-          <p class="mt-2 text-sm">📞 <a href="tel:+352661686855" style="color: var(--logo-green);" class="hover:underline">+352 661 686 855</a></p>
-          <p class="mt-1 text-sm">✉️ <span style="color: var(--logo-green);">stephane.winckel@luxmeca.lu</span></p>
-          <p class="mt-1 text-sm">🌐 <a href="https://www.dirickx.fr/" target="_blank" rel="noopener" style="color: var(--logo-green);" class="hover:underline">Dirickx</a></p>
-          <p class="mt-1 text-sm">🌐 <a href="https://www.luxmeca.com/" target="_blank" rel="noopener" style="color: var(--logo-green);" class="hover:underline">LuxMéca</a></p>
-          <p class="mt-1 text-sm">🔗 <a href="https://www.linkedin.com/in/stephane-winckel-a00b32267/" target="_blank" rel="noopener" style="color: var(--logo-green);" class="hover:underline">Linkedin</a></p>
-          <p class="mt-4 text-sm text-gray-500">🕓 Lun–Ven 8:00–15:00</p>
-          <p class="mt-2 text-sm">🏢 Lux-Méca SA, 15-17 ZARE Ilôt Est, L-4385 Ehlerange, Luxembourg</p>
+    <!-- Contact Section -->
+    <section id="contact" class="fade-in space-y-8">
+      <h2 class="text-2xl font-semibold text-center text-green-800">Contact</h2>
+      <div class="md:grid md:grid-cols-2 gap-12">
+        <div class="space-y-3 text-gray-700">
+          <p class="text-lg font-medium">Stéphane Winckel</p>
+          <p class="text-gray-500">Chargé d'affaire - Dirickx Luxembourg / Luxmeca SA</p>
+          <p class="text-sm">📞 <a href="tel:+352661686855" class="text-green-800 hover:underline">+352 661 686 855</a></p>
+          <p class="text-sm">✉️ <span class="text-green-800">stephane.winckel@luxmeca.lu</span></p>
+          <p class="text-sm">🌐 <a href="https://www.dirickx.fr/" target="_blank" class="text-green-800 hover:underline">Dirickx</a></p>
+          <p class="text-sm">🌐 <a href="https://www.luxmeca.com/" target="_blank" class="text-green-800 hover:underline">LuxMéca</a></p>
+          <p class="text-sm">🔗 <a href="https://www.linkedin.com/in/stephane-winckel-a00b32267/" target="_blank" class="text-green-800 hover:underline">Linkedin</a></p>
+          <p class="text-sm text-gray-500">🕓 Lun–Ven 8:00–15:00</p>
+          <p class="text-sm text-gray-500">🏢 Lux-Méca SA, 15-17 ZARE Ilôt Est, L-4385 Ehlerange, Luxembourg</p>
         </div>
-
-        <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-5 w-full">
-          <div><label class="block text-sm font-medium">Nom</label><input name="name" required class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2" /></div>
-          <div><label class="block text-sm font-medium">Email</label><input name="email" type="email" required class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2" /></div>
-          <div><label class="block text-sm font-medium">Téléphone</label><input name="phone" class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2" /></div>
-          <div><label class="block text-sm font-medium">Message</label><textarea name="message" rows="5" required class="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2"></textarea></div>
-          <button type="submit" class="btn btn-green px-5 py-3 rounded-md w-full">Envoyer</button>
+        <form action="https://formspree.io/f/yourformid" method="POST" class="space-y-4">
+          <input type="text" name="name" placeholder="Nom" required class="w-full rounded-md border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-green-800 focus:outline-none" />
+          <input type="email" name="email" placeholder="Email" required class="w-full rounded-md border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-green-800 focus:outline-none" />
+          <input type="tel" name="phone" placeholder="Téléphone" class="w-full rounded-md border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-green-800 focus:outline-none" />
+          <textarea name="message" rows="5" placeholder="Message" required class="w-full rounded-md border border-gray-300 px-3 py-2 focus:ring-2 focus:ring-green-800 focus:outline-none"></textarea>
+          <button type="submit" class="w-full bg-green-800 text-white px-5 py-3 rounded-md font-medium hover:bg-green-900 transition">Envoyer</button>
         </form>
       </div>
     </section>
 
-    <footer class="text-center text-sm text-gray-500 fade-in pt-10 border-t border-gray-200 w-full">
-      © <script>document.write(new Date().getFullYear())</script> Dirickx — Chargé d'affaire Luxembourg · Stéphane Winckel · Luxmeca SA
-    </footer>
-
   </main>
 
+  <!-- Footer -->
+  <footer class="text-center text-sm text-gray-500 py-8 border-t border-gray-200 fade-in">
+    © <script>document.write(new Date().getFullYear())</script> Dirickx — Chargé d'affaire Luxembourg · Stéphane Winckel · Luxmeca SA
+  </footer>
+
+  <!-- Intersection Observer for fade-in -->
   <script>
-    const elements = document.querySelectorAll('.fade-in');
+    const elements = document.querySelectorAll('.fade-in, .logo-anim');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
@@ -170,5 +133,6 @@
     }, { threshold: 0.1 });
     elements.forEach(el => observer.observe(el));
   </script>
+
 </body>
 </html>
